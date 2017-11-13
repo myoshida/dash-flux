@@ -1,6 +1,6 @@
 # dash-flux
 
-An EventEmitter-based layman's Flux implementaion
+An EventEmitter-based layman's Flux implementation
 
 ## Installation
 

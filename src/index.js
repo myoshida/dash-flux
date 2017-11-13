@@ -1,5 +1,5 @@
-// dash-ui/lib/flux - An EventEmitter-based layman's Flux implementaion
-// The MIT License (MIT) Copyright (c) 2016 Masakazu Yoshida
+// dash-flux - An EventEmitter-based layman's Flux implementaion
+// The MIT License (MIT); Copyright (c) 2016-Present Masakazu Yoshida
 
 import React from 'react';
 import PropTypes from 'prop-types';
