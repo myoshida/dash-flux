@@ -2,9 +2,10 @@
 // The MIT License (MIT) Copyright (c) 2016 Masakazu Yoshida
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { EventEmitter } from 'events';
 
-const sharedContextTypes = { store: React.PropTypes.any };
+const sharedContextTypes = { store: PropTypes.any };
 
 export class Component extends React.Component {
   dispatch(...args) {
@@ -33,8 +34,8 @@ class Provider extends React.Component {
 }
 Provider.childContextTypes = sharedContextTypes;
 Provider.propTypes = {
-  children: React.PropTypes.any.isRequired,
-  store: React.PropTypes.any.isRequired,
+  children: PropTypes.any.isRequired,
+  store: PropTypes.any.isRequired,
 };
 
 class Store extends EventEmitter {
