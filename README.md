@@ -1,11 +1,19 @@
-# dash-ui/lib/flux
+# dash-flux
 
 An EventEmitter-based layman's Flux implementaion
 
 ## Installation
 
+Install with npm:
+
 ```shell
-  npm install dash-ui --save
+  npm install dash-flux --save
+```
+
+Install with yarn:
+
+```shell
+  yarn add dash-flux
 ```
 
 ## Basic Usage ("Hello World")
@@ -13,7 +21,7 @@ An EventEmitter-based layman's Flux implementaion
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Component, createStore, next } from 'dash-ui/lib/flux';
+import { Component, createStore, next } from 'dash-flux';
 
 class MyComponent extends Component {
   render() {
@@ -50,8 +58,9 @@ store.update(() => { count: 0 });	// this fires rendering
 
 ## Release History
 
-* 0.0.3 Revised lib/flux.js.
+* Forked from dash-ui v0.0.4 (since 2016-02-24); Not yet released.
 
-* 0.0.2 Added some utility functions.
+## To-dos
 
-* 0.0.1 Initial preliminary release
+- Add regression tests.
+- Add an API documentation.
