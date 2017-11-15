@@ -58,9 +58,15 @@ store.update(() => { count: 0 });	// this fires rendering
 
 ## Release History
 
+* v0.5.0 Preliminary release (The code works beautifully but needs
+  some decent documentations.)
+
 * Forked from dash-ui v0.0.4 (since 2016-02-24); Not yet released.
 
 ## To-dos
 
+- Improve the "Hello World" sample.
+
 - Add regression tests.
+
 - Add an API documentation.
