@@ -1,11 +1,11 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { EventEmitter } from 'events';
+
 /** @license dash-flux
  * Copyright (c) 2016-2018 Masakazu Yoshida.
  * This source code is licensed under The MIT License (MIT).
  */
-
-import React from 'react';
-import PropTypes from 'prop-types';
-import { EventEmitter } from 'events';
 
 const sharedContextTypes = { store: PropTypes.any };
 
