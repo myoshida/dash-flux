@@ -19,7 +19,7 @@
   "author": "Masakazu Yoshida <1901958+myoshida@users.noreply.github.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^15.5.0"
+    "react": ">=15.5.0"
   },
   "dependencies": {
     "prop-types": "^15.6.0"
