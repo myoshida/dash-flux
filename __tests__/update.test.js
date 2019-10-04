@@ -34,18 +34,19 @@ test('update: sequential 2', () => {
   ).resolves.toEqual({ a: 2, b: 1, c: 2, d: 3 });
 });
 
-test('update: pararell (pre)', () => {
+test('update: prepare for queuing', () => {
   const s = { a: 0 };
   return expect(
     store.update(state => s)
   ).resolves.toBe(s);
 });
-test('update: queue', () => {
-  store.update(state => next(state, { a: 1, b: 2 }));
-  store.update(state => next(state, { a: 2, c: 3 }));
-  store.update(state => next(state, { a: 3, d: 4 }));
-  store.update(state => next(state, { a: 4, e: 5 }));
+test('update: queuing', () => {
+  store.update(state => next(state, { a: 1, a0: state.a, b: 2 }));
+  store.update(state => next(state, { a: 2, a1: state.a, c: 3 }));
+  store.update(state => next(state, { a: 3, a2: state.a, d: 4 }));
+  store.update(state => next(state, { a: 4, a3: state.a, e: 5 }));
   return expect(
-    store.update(state => next(state, { a: 3, e: 5 }))
-  ).resolves.toEqual({ a: 3, b: 2, c: 3, d: 4, e: 5 });
+    store.update(state => next(state, { a: 5, a4: state.a, e: 5 }))
+  ).resolves.toEqual({
+    a: 5, a0: 0, a1: 1, a2: 2, a3: 3, a4: 4, b: 2, c: 3, d: 4, e: 5 });
 });
